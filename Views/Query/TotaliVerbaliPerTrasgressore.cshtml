@@ -1,0 +1,34 @@
+﻿@model Dictionary<string, int>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Totali Verbali Per Trasgressore";
+}
+
+<h2 class="text-white"> Risultati ottenuti: </h2>
+
+@if(Model.Any())
+{
+    <table class="table  table-striped cardUrl">
+        <thead>
+            <tr>
+                <th>Trasgressore</th>
+                <th>Numero di Verbali</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Key</td>
+                    <td>@item.Value</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nessuna spedizione trovata.</p>
+}

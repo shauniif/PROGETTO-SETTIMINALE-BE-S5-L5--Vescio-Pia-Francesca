@@ -7,4 +7,9 @@
     <RootNamespace>PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
 </Project>

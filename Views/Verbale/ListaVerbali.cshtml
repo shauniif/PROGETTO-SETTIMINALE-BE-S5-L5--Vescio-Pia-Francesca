@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca.Models.VerbaleModel>
+
+@{
+    ViewData["Title"] = "ListaVerbali";
+}
+
+<h1 class="text-white">Lista dei Verbali</h1>
+
+<p>
+    <a class="btn btn-M text-white" asp-controller="Verbale" asp-action="Create">Aggiungi Verbale</a>
+</p>
+
+<div class="table-container">
+    <table class="table table-striped cardUrl">
+        <thead>
+            <tr>
+                <th>Data Violazione</th>
+                <th>Indirizzo Violazione</th>
+                <th>Nominativo Agente </th>
+                <th>Data Trascrizione Verbale</th>
+                <th>Trasgressore </th>
+                <th>Violazione</th>
+                <th>Importo</th>
+                <th>Decurtamento Punti</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var verbale in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => verbale.DataViolazione)</td>
+                    <td>@Html.DisplayFor(model => verbale.IndirizzoViolazione)</td>
+                    <td>@Html.DisplayFor(model => verbale.NominativoAgente)</td>
+                    <td>@Html.DisplayFor(model => verbale.DataTrascrizioneVerbale)</td>
+                    <td>@verbale.Anagrafica.Nome @verbale.Anagrafica.Cognome</td>
+                    <td>@Html.DisplayFor(model => verbale.Violazione.Descrizione)</td>
+                    <td>@Html.DisplayFor(model => verbale.Importo)</td>
+                    <td>@Html.DisplayFor(model => verbale.DecurtamentoPunti)</td>
+                    <td>
+                        <a class="btn btn-I btn-sm" asp-controller="Verbale" asp-action="Read" asp-route-id="@verbale.Id">Dettaglio</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

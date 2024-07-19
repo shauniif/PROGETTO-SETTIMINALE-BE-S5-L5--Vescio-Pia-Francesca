@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca.Entity.TipoViolazioneEntity>
+
+@{
+    ViewData["Title"] = "ListaTipoViolazioni";
+}
+
+<h1 class="text-white">Lista Tipo di Violazioni</h1>
+
+<p>
+    <a class="btn btn-M" asp-controller="TipoViolazione" asp-action="Create">Aggiungi Tipo Violazione</a>
+</p>
+<table class="table">
+    <table class="table table-striped cardUrl">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Descrizione)</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Descrizione)</td>
+                    <td>
+                        <a class="btn btn-I btn-sm" asp-controller="TipoViolazione" asp-action="Read" asp-route-id="@item.Id">Dettaglio</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

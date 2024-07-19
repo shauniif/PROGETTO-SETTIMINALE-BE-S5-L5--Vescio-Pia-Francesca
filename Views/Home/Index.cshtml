@@ -1,8 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<div class="hclass">
+<div class="cardUrl d-flex justify-content-sm-center align-content-center ">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Descrizione</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Visualizzare il totale dei verbali trascritti raggruppati per trasgressore</td>
+                    <td><a class="btn btn-M" asp-controller="Query" asp-action="TotaliVerbaliPerTrasgressore">Vedi Risultato</a></td>
+                </tr>
+                <tr>
+                    <td>Visualizzare il totale dei punti decurtati raggruppati per trasgressore</td>
+                    <td><a class="btn btn-M" asp-controller="Query" asp-action="PuntiDecurtatiPerTrasgressore">Vedi Risultato</a></td>
+                </tr>
+                <tr>
+                    <td>Visualizzare importo, cognome, nome, data di violazione e decurtamento punti delle violazioni che superano i 10 punti</td>
+                    <td><a class="btn btn-M" asp-controller="Query" asp-action="ViolazioniConDecurtamentoMaggioriDi10">Vedi Risultato</a></td>
+                </tr>
+                <tr>
+                    <td>Le violazioni il cui importo è maggiore di 400 euro</td>
+                    <td><a class="btn btn-M" asp-controller="Query" asp-action="ViolazioniMaggioridi400Euro">Vedi Risultato</a></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
 </div>

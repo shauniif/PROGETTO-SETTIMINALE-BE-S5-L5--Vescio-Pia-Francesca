@@ -1,0 +1,33 @@
+﻿@model PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca.Entity.TipoViolazioneEntity
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4 class="text-white">Inserisci Tipo di Violzione </h4>
+<hr />
+<div class="row">
+    <div class="col-md-4 text-white mb-3">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Descrizione" class="control-label"></label>
+                <input asp-for="Descrizione" class="form-control" />
+                <span asp-validation-for="Descrizione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-I my-2" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListaTipoViolazioni" asp-controller="TipoViolazione" class="text-white btn btn-E">Back to List</a>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

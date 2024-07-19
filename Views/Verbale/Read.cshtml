@@ -1,0 +1,66 @@
+﻿@model PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca.Entity.VerbaleEntity
+
+@{
+    ViewData["Title"] = "Read";
+}
+
+<h4 class="text-white">Dettaglio Verbale</h4>
+
+
+<div>
+    <dl class="row cardUrl">
+    <h4 class="text-white">Verbale n°@Html.DisplayFor(model => model.Id) </h4>
+    <hr />
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataViolazione)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IndirizzoViolazione)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IndirizzoViolazione)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NominativoAgente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NominativoAgente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataTrascrizioneVerbale)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataTrascrizioneVerbale)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdAnagrafica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAnagrafica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdViolazione)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdViolazione)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Importo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Importo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DecurtamentoPunti)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="ListaVerbali" asp-controller="Verbale" class="text-white btn-E">Back to List</a>
+</div>

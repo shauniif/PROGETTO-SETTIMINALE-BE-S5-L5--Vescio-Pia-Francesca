@@ -1,0 +1,29 @@
+﻿@model Dictionary<string, int>
+@{
+    ViewData["Title"] = "Punti Decurtati Per Trasgressore";
+}
+<h2 class="text-white"> Risultati ottenuti: </h2>
+@if (Model.Any())
+{
+    <table class="table table-striped cardUrl">
+        <thead>
+            <tr>
+                <th>Trasgressore</th>
+                <th>Punti Decurtati</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Key</td>
+                    <td>@item.Value</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nessuna spedizione trovata.</p>
+}

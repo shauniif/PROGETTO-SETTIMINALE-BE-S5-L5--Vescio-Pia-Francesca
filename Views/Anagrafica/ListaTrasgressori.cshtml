@@ -1,0 +1,41 @@
+﻿@using PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca.Entity
+@model IEnumerable<AnagraficaEntity>
+
+@{
+    ViewData["Title"] = "Lista Trasgressori";
+}
+
+@{
+} 
+<h2 class="text-white">Lista Trasgressori</h2>
+<a class="btn btn-M" asp-controller="Anagrafica" asp-action="Create">Aggiungi Trasgressore</a>
+
+<table class="table table-striped cardUrl mt-3">
+    <thead>
+        <tr>
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th>Indirizzo</th>
+            <th>Città</th>
+            <th>CAP</th>
+            <th>Codice Fiscale</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trasgressore in Model)
+        {
+            <tr>
+                <td>@trasgressore.Cognome</td>
+                <td>@trasgressore.Nome</td>
+                <td>@trasgressore.Indirizzo</td>
+                <td>@trasgressore.Citta</td>
+                <td>@trasgressore.CAP</td>
+                <td>@trasgressore.CodiceFiscale</td>
+                <td>
+                    <a class="btn btn-I" asp-controller="Anagrafica" asp-action="Read" asp-route-id="@trasgressore.Id">Dettaglio</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

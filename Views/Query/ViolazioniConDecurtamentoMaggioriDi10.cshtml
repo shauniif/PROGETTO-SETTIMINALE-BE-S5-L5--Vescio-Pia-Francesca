@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca.Models.AnagraficaQueryModel>
+
+@{
+    ViewData["Title"] = "Violazioni Con Decurtamento Maggiori Di 5";
+}
+
+<h2 class="text-white">Risultati Ottenuti:</h2>
+
+<p>
+</p>
+<table class="table table-striped cardUrl">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Trasgressore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Indirizzo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataViolazione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trasgressore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indirizzo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataViolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

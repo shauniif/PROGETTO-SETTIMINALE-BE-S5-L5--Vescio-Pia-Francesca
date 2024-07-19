@@ -1,0 +1,53 @@
+﻿@model PROGETTO_SETTIMINALE_BE_S5_L5__Vescio_Pia_Francesca.Entity.AnagraficaEntity
+
+@{
+    ViewData["Title"] = "Read";
+}
+
+<h1 class="text-white">Dettaglio del tragressore</h1>
+
+<div class="cardUrl mb-3">
+    <h4>Trasgressore n°@Html.DisplayFor(model => model.Id)  </h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cognome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cognome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Indirizzo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Citta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Citta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CAP)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CAP)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodiceFiscale)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodiceFiscale)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="ListaTrasgressori" asp-controller="Anagrafica" class="text-white btn btn-I">Back to List</a>
+</div>

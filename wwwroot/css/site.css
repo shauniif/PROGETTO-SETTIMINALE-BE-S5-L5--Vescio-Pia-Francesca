@@ -18,5 +18,30 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: rgb(0,36,24);
+    background: linear-gradient(90deg, rgba(0,36,24,1) 0%, rgba(9,96,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+td,th {
+    color: white
+}
+.cardUrl {
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 5em;
+}
+.hclass {
+    margin-top: 10em;
+}
+.btn-M {
+    background-color: #5dbea3;
+    color: white;
+}
+.btn-E {
+    background-color: #dd7973;
+    color: white
+}
+.btn-I {
+    background-color: #5ADBB5;
+    color: white;
 }
